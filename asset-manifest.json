@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/speedwapp-test/static/css/main.a617e044.chunk.css",
+    "main.js": "/speedwapp-test/static/js/main.d3450d8e.chunk.js",
+    "main.js.map": "/speedwapp-test/static/js/main.d3450d8e.chunk.js.map",
+    "runtime-main.js": "/speedwapp-test/static/js/runtime-main.befc45bf.js",
+    "runtime-main.js.map": "/speedwapp-test/static/js/runtime-main.befc45bf.js.map",
+    "static/js/2.8a3382e6.chunk.js": "/speedwapp-test/static/js/2.8a3382e6.chunk.js",
+    "static/js/2.8a3382e6.chunk.js.map": "/speedwapp-test/static/js/2.8a3382e6.chunk.js.map",
+    "static/js/3.90a216a7.chunk.js": "/speedwapp-test/static/js/3.90a216a7.chunk.js",
+    "static/js/3.90a216a7.chunk.js.map": "/speedwapp-test/static/js/3.90a216a7.chunk.js.map",
+    "index.html": "/speedwapp-test/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/speedwapp-test/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.8a3382e6.chunk.js.LICENSE.txt": "/speedwapp-test/static/js/2.8a3382e6.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/speedwapp-test/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.befc45bf.js",
+    "static/js/2.8a3382e6.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.d3450d8e.chunk.js"
+  ]
+}
