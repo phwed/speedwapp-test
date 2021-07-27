@@ -1,11 +1,11 @@
 import React from "react";
 import logo from "../src/assets/logo.svg";
-import background_pattern from "../src/assets/background-pattern.svg";
+import background_pattern from "../src/assets/pattern.png";
 import styled from "styled-components";
 import AsyncSelect from "react-select/async";
 import ReactTimeAgo from "react-time-ago";
 import "./App.css";
-import { result } from "lodash";
+import { Container } from "reactstrap";
 
 // load options using API call
 const loadOptions = (inputValue) => {
@@ -17,8 +17,6 @@ const loadOptions = (inputValue) => {
 };
 
 function App() {
-  const [results, setResults] = React.useState({});
-
   const Option = ({ innerRef, innerProps, ...props }) => {
     return (
       //optionally you can replace this parent div with a touchable opacity button, and remove the button
@@ -41,15 +39,6 @@ function App() {
             {props.data.comments} comments
           </span>
         </div>
-
-        {/* <button
-          onClick={(e) => {
-            console.log(props.data);
-            setResults(props.data);
-          }}
-        >
-          <p>Invite</p>
-        </button> */}
       </SearchResults>
     );
   };
@@ -71,13 +60,15 @@ function App() {
   };
 
   return (
-    <Container>
-      <Background src={background_pattern} />
-      <Content className="col-4">
-        <Logo src={logo} />
+    <ContentContainer fluid bg={background_pattern}>
+      <Pattern src={background_pattern} />
+      <Content className="col-10 col-md-8 col-lg-4">
+        <div style={style.center}>
+          <Logo src={logo} />
+        </div>
         <MySelect />
       </Content>
-    </Container>
+    </ContentContainer>
   );
 }
 
@@ -85,29 +76,29 @@ export default App;
 
 // styled-components
 
-const Container = styled.div`
+const ContentContainer = styled(Container)`
   height: 100vh;
-  width: 100vw;
   padding-top: 15vh;
   font-family: "Poppins", sans-serif;
   background: #1a87c5;
   display: flex;
   justify-content: center;
 `;
-const Background = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-`;
 
 const Content = styled.div`
   z-index: 1;
 `;
 
+const Pattern = styled.img`
+  position: absolute;
+  top: 0;
+  width: 100vw;
+`;
+
 const Logo = styled.img`
   margin-bottom: 1rem;
+  height: 10vh;
+  align-self: center;
 `;
 
 const SearchResults = styled.div`
@@ -132,5 +123,9 @@ const style = {
   info: {
     fontSize: "12px",
     color: "gray",
+  },
+  center: {
+    display: "grid",
+    placeItems: "center",
   },
 };
