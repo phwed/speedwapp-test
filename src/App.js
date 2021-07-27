@@ -10,7 +10,7 @@ import { result } from "lodash";
 // load options using API call
 const loadOptions = (inputValue) => {
   return fetch(
-    `http://hn.algolia.com/api/v1/search?query=${inputValue}&tags=story/`
+    `https://hn.algolia.com/api/v1/search?query=${inputValue}&tags=story`
   )
     .then((response) => response.json())
     .then((data) => data.hits);
