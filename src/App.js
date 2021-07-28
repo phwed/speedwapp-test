@@ -36,7 +36,7 @@ function App() {
           <span style={style.info}>
             {props.data.points} points | {props.data.author} |{" "}
             <ReactTimeAgo date={props.data.created_at} locale="en-US" /> |{" "}
-            {props.data.comments} comments
+            {props.data.num_comments} comments
           </span>
         </div>
       </SearchResults>
